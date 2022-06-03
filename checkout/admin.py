@@ -3,6 +3,10 @@ from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    '''
+    This allows us to add the editable lineitems
+    on the same page as the order view
+    '''
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
